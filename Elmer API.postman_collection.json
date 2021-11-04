@@ -1,0 +1,559 @@
+{
+	"info": {
+		"_postman_id": "4cb0571c-3126-407d-88b6-ae473ef63717",
+		"name": "Elmer API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login flow",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"mseedahmed@elm.sa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"mseedahmed@elm.sa\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2-nOO9QiTIwXgNtWtBJezz8kv3SLc\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Aug 2021 09:26:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "OK"
+						}
+					]
+				},
+				{
+					"name": "verify otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mseedahmed@elm.sa\",\n    \"otp\": \"4242\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/verify-otp",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"verify-otp"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "verify otp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"mseedahmed@elm.sa\",\n    \"otp\": \"8122\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/verify-otp",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"verify-otp"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bd-uP3NjRYuC6PXZjEQ3aXx/2Abz6s\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Aug 2021 09:26:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1zZWVkYWhtZWRAZWxtLnNhIiwiaWF0IjoxNjI4MDY5MjE2LCJleHAiOjE2NTk2MjY4MTZ9.514LA_XXdg1hhEmXC-w_b7mFcrVgouWhzw5Ka4_S15Y\",\n    \"roles\": [\n        1\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Submit incident flow",
+			"item": [
+				{
+					"name": "submit incident",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"description\": \"incident description new\",\n  \"typeId\": 1,\n  \"latitude\" :898.98989,\n  \"longitude\":688.88788 \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/incident",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"incident"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "submit incident",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/incident",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"incident"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "12365"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"304d-6pXf1QyN7uucpuLmhQb/DChSKwc\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Nov 2021 08:04:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"baseURL\": \"10.33.8.53\",\n    \"incidents\": [\n        {\n            \"id\": \"0be8e341-5364-44c9-88a5-99bfc91d12ad\",\n            \"description\": \"incident description new\",\n            \"latitude\": 89898989,\n            \"longitude\": 68888788,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-17T06:09:45.621Z\",\n            \"updatedAt\": \"2021-10-17T06:09:45.621Z\",\n            \"medias\": [\n                {\n                    \"id\": \"b768bc32-d926-4c11-b48a-e60cd2e600b7\",\n                    \"mimeType\": \"image/png\",\n                    \"url\": \"10.33.8.53/1634450997546-489862798\",\n                    \"type\": 0,\n                    \"incidentId\": \"0be8e341-5364-44c9-88a5-99bfc91d12ad\"\n                }\n            ]\n        },\n        {\n            \"id\": \"281fcb81-a2e4-4cc9-a3f5-48b265e7dc02\",\n            \"description\": \"5555555555555tt5\",\n            \"latitude\": 24.7337534,\n            \"longitude\": 46.774254,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 3,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-11-02T12:53:44.625Z\",\n            \"updatedAt\": \"2021-11-02T12:53:44.626Z\",\n            \"medias\": [\n                {\n                    \"id\": \"24aa7af0-3f29-4987-a857-f8d9e688b637\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"10.33.8.53/1635857624923-695792659\",\n                    \"type\": 0,\n                    \"incidentId\": \"281fcb81-a2e4-4cc9-a3f5-48b265e7dc02\"\n                }\n            ]\n        },\n        {\n            \"id\": \"2904bf2d-13c7-4271-824d-f50bbd6c6cf3\",\n            \"description\": \"000000000\",\n            \"latitude\": 24.7337107,\n            \"longitude\": 46.7742429,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:51:12.925Z\",\n            \"updatedAt\": \"2021-10-19T16:51:12.925Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"2dbee07d-6220-41db-9656-f9de88a6f6b8\",\n            \"description\": \"eeee wwwwwww\",\n            \"latitude\": 89.898989,\n            \"longitude\": 68.888788,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-18T10:46:50.097Z\",\n            \"updatedAt\": \"2021-10-18T10:46:50.098Z\",\n            \"medias\": [\n                {\n                    \"id\": \"a60dbf62-43be-42e4-8d8f-de55be333ca7\",\n                    \"mimeType\": \"image/png\",\n                    \"url\": \"10.33.8.53/1634554035130-937003097\",\n                    \"type\": 0,\n                    \"incidentId\": \"2dbee07d-6220-41db-9656-f9de88a6f6b8\"\n                }\n            ]\n        },\n        {\n            \"id\": \"2fdc0ae5-ae4f-44ae-9e0f-0462e1c31956\",\n            \"description\": \"Tytytytytytytygy\",\n            \"latitude\": 24.733702,\n            \"longitude\": 46.7742467,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T15:38:07.588Z\",\n            \"updatedAt\": \"2021-10-19T15:38:07.588Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"3e162b9a-e4e0-4010-b4a0-4109d0b53007\",\n            \"description\": \"444444\",\n            \"latitude\": 24.7337357,\n            \"longitude\": 46.7742471,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:23:44.767Z\",\n            \"updatedAt\": \"2021-10-19T16:23:44.767Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"4b832edf-d07a-45a1-b03c-34bc0bec2e69\",\n            \"description\": \"issues NEW\",\n            \"latitude\": 89.898989,\n            \"longitude\": 68.888788,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 5,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-18T09:04:45.964Z\",\n            \"updatedAt\": \"2021-10-18T09:04:45.964Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"4f1c168c-fa2a-40a0-afcb-a6d848523013\",\n            \"description\": \"666666\",\n            \"latitude\": 24.7336746,\n            \"longitude\": 46.7742688,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T11:22:18.135Z\",\n            \"updatedAt\": \"2021-10-19T11:22:18.135Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"5f1c56c1-99e4-46a8-926b-d3b62cbc749e\",\n            \"description\": \"Description test\",\n            \"latitude\": 24.7337266,\n            \"longitude\": 46.7742543,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T11:03:18.254Z\",\n            \"updatedAt\": \"2021-10-19T11:03:18.255Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"61bb0374-4df8-4ba9-a680-5a16f134f059\",\n            \"description\": \"33333333\",\n            \"latitude\": 24.7336973,\n            \"longitude\": 46.7742397,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:46:33.927Z\",\n            \"updatedAt\": \"2021-10-19T16:46:33.927Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"70cf6cef-5d37-45be-8b54-de38f8b9b4cf\",\n            \"description\": \"Test\",\n            \"latitude\": 25,\n            \"longitude\": 47,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-17T07:36:35.752Z\",\n            \"updatedAt\": \"2021-10-17T07:36:35.752Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"854a5a6e-8012-4d79-ad7a-67f3313125a9\",\n            \"description\": \"test\",\n            \"latitude\": 37.785834,\n            \"longitude\": -122.406417,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-25T08:33:45.911Z\",\n            \"updatedAt\": \"2021-10-25T08:33:45.911Z\",\n            \"medias\": [\n                {\n                    \"id\": \"ee9d7de7-680e-4fa5-8a99-bf8482945cde\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"10.33.8.53/1635150826002-788745924\",\n                    \"type\": 0,\n                    \"incidentId\": \"854a5a6e-8012-4d79-ad7a-67f3313125a9\"\n                }\n            ]\n        },\n        {\n            \"id\": \"956c7838-11d7-425c-9a2a-d907f8ca35bd\",\n            \"description\": \"Tttttreeessdtyy\",\n            \"latitude\": 24.7337135,\n            \"longitude\": 46.7742494,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T11:15:50.004Z\",\n            \"updatedAt\": \"2021-10-19T11:15:50.004Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"95cbcb47-c849-4355-a3b2-98abee036ecd\",\n            \"description\": \"test\",\n            \"latitude\": 37.785834,\n            \"longitude\": -122.406417,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-11-01T13:56:46.946Z\",\n            \"updatedAt\": \"2021-11-01T13:56:46.946Z\",\n            \"medias\": [\n                {\n                    \"id\": \"3a46c81c-f52c-4c3b-a8d8-4a655e057dd3\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"10.33.8.53/1635775010357-829791132\",\n                    \"type\": 0,\n                    \"incidentId\": \"95cbcb47-c849-4355-a3b2-98abee036ecd\"\n                },\n                {\n                    \"id\": \"f636f566-fb5c-4c88-9431-60277462c678\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"10.33.8.53/1635775008089-718847424\",\n                    \"type\": 0,\n                    \"incidentId\": \"95cbcb47-c849-4355-a3b2-98abee036ecd\"\n                }\n            ]\n        },\n        {\n            \"id\": \"984e301f-9ff5-4563-afb4-bf9c38c15808\",\n            \"description\": \"888888\",\n            \"latitude\": 24.7337477,\n            \"longitude\": 46.774248,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T11:40:35.546Z\",\n            \"updatedAt\": \"2021-10-19T11:40:35.546Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"9cee78d2-3700-4474-9bc9-f8ec9d8b78d5\",\n            \"description\": \"998999889988\",\n            \"latitude\": 24.7337087,\n            \"longitude\": 46.7742509,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:33:06.228Z\",\n            \"updatedAt\": \"2021-10-19T16:33:06.229Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"a26fdc62-28cb-4858-9eec-a768ae43f720\",\n            \"description\": \"121212121212\",\n            \"latitude\": 24.733696,\n            \"longitude\": 46.774239,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:38:48.722Z\",\n            \"updatedAt\": \"2021-10-19T16:38:48.723Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"a61806ac-01b5-4742-8cd9-ca426ccdcbb3\",\n            \"description\": \"test \",\n            \"latitude\": 37.785834,\n            \"longitude\": -122.406417,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-25T08:37:00.201Z\",\n            \"updatedAt\": \"2021-10-25T08:37:00.201Z\",\n            \"medias\": [\n                {\n                    \"id\": \"0dcc34bc-841f-46b3-bf68-e25234a93327\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"10.33.8.53/1635151020903-153598433\",\n                    \"type\": 0,\n                    \"incidentId\": \"a61806ac-01b5-4742-8cd9-ca426ccdcbb3\"\n                },\n                {\n                    \"id\": \"8e0c7f87-f649-44dd-85b9-0d703cb2c4e9\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"10.33.8.53/1635151020322-868842842\",\n                    \"type\": 0,\n                    \"incidentId\": \"a61806ac-01b5-4742-8cd9-ca426ccdcbb3\"\n                }\n            ]\n        },\n        {\n            \"id\": \"a71489f0-f3ce-48da-91f6-d8b509d24a47\",\n            \"description\": \"test describtion\",\n            \"latitude\": 37.785834,\n            \"longitude\": -122.406417,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-11-01T11:49:15.456Z\",\n            \"updatedAt\": \"2021-11-01T11:49:15.456Z\",\n            \"medias\": [\n                {\n                    \"id\": \"212a0610-ac57-405f-a11f-c5811c051126\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"10.33.8.53/1635767355562-513064217\",\n                    \"type\": 0,\n                    \"incidentId\": \"a71489f0-f3ce-48da-91f6-d8b509d24a47\"\n                }\n            ]\n        },\n        {\n            \"id\": \"ab73fdb8-fb49-43cc-bd6d-45fae4f1a2f2\",\n            \"description\": \"incident description new\",\n            \"latitude\": 89898989,\n            \"longitude\": 68888788,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-17T06:05:44.478Z\",\n            \"updatedAt\": \"2021-10-17T06:05:44.479Z\",\n            \"medias\": [\n                {\n                    \"id\": \"de7e3f07-ec59-41b7-841d-7dd63a34b62d\",\n                    \"mimeType\": \"image/png\",\n                    \"url\": \"10.33.8.53/1634450965273-664799851\",\n                    \"type\": 0,\n                    \"incidentId\": \"ab73fdb8-fb49-43cc-bd6d-45fae4f1a2f2\"\n                }\n            ]\n        },\n        {\n            \"id\": \"b189f774-aa9b-491d-ace0-a989ad6ae2e5\",\n            \"description\": \"Rererererere\",\n            \"latitude\": 24.7337154,\n            \"longitude\": 46.7742608,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T15:30:41.204Z\",\n            \"updatedAt\": \"2021-10-19T15:30:41.204Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"c2dd5278-712b-4995-9531-608e14ae6f94\",\n            \"description\": \"11111111\",\n            \"latitude\": 24.7337035,\n            \"longitude\": 46.7742368,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:48:37.054Z\",\n            \"updatedAt\": \"2021-10-19T16:48:37.054Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"c89d945f-d979-43b5-b9b4-c03619eacc02\",\n            \"description\": \"Thisis the last description\",\n            \"latitude\": 24.733705,\n            \"longitude\": 46.7742452,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T11:13:32.411Z\",\n            \"updatedAt\": \"2021-10-19T11:13:32.411Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"d36f55bb-5445-4f8b-a01a-af4e2304a0b7\",\n            \"description\": \"test\",\n            \"latitude\": 37.785834,\n            \"longitude\": -122.406417,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 3,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-11-01T12:50:30.830Z\",\n            \"updatedAt\": \"2021-11-01T12:50:30.830Z\",\n            \"medias\": [\n                {\n                    \"id\": \"97211853-8ea5-4c61-8ecf-9e0239d8cd01\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"10.33.8.53/1635771030966-541795915\",\n                    \"type\": 0,\n                    \"incidentId\": \"d36f55bb-5445-4f8b-a01a-af4e2304a0b7\"\n                }\n            ]\n        },\n        {\n            \"id\": \"d378b7b4-e2d1-4138-b534-3d9f7b08c751\",\n            \"description\": \"00000000\",\n            \"latitude\": 24.7336704,\n            \"longitude\": 46.7742536,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:08:02.423Z\",\n            \"updatedAt\": \"2021-10-19T16:08:02.423Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"d5d22179-9673-4289-bc9a-6ef3e8850a8d\",\n            \"description\": \"11111111\",\n            \"latitude\": 24.7337006,\n            \"longitude\": 46.7742438,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:53:14.177Z\",\n            \"updatedAt\": \"2021-10-19T16:53:14.177Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"e44b743e-c244-487a-becf-927f4c2567ec\",\n            \"description\": \"Yyyyyyyyyy5\",\n            \"latitude\": 24.7337402,\n            \"longitude\": 46.7742498,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T11:18:13.328Z\",\n            \"updatedAt\": \"2021-10-19T11:18:13.328Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"e6c32899-3c6f-4a70-b649-553fedaefce6\",\n            \"description\": \"Testttttt123456\",\n            \"latitude\": 24.7338161,\n            \"longitude\": 46.7742793,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 7,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-11-01T12:51:37.567Z\",\n            \"updatedAt\": \"2021-11-01T12:51:37.567Z\",\n            \"medias\": [\n                {\n                    \"id\": \"e05e7aa4-1d08-4000-be23-282fde343170\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"10.33.8.53/1635771097798-542478289\",\n                    \"type\": 0,\n                    \"incidentId\": \"e6c32899-3c6f-4a70-b649-553fedaefce6\"\n                }\n            ]\n        },\n        {\n            \"id\": \"f9ba717a-efdf-4f55-917c-51d66f754492\",\n            \"description\": \"111111111\",\n            \"latitude\": 24.733702,\n            \"longitude\": 46.7742482,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:11:26.751Z\",\n            \"updatedAt\": \"2021-10-19T16:11:26.751Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"fbdb9892-bada-4acc-b757-7c47d4ac931c\",\n            \"description\": \"issues 44\",\n            \"latitude\": 89.898989,\n            \"longitude\": 68.888788,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-16T18:39:16.071Z\",\n            \"updatedAt\": \"2021-10-16T18:39:16.071Z\",\n            \"medias\": [\n                {\n                    \"id\": \"11faa08e-0769-43c1-aaca-d091fbad0399\",\n                    \"mimeType\": \"image/png\",\n                    \"url\": \"10.33.8.53/1634548218871-465386997\",\n                    \"type\": 0,\n                    \"incidentId\": \"fbdb9892-bada-4acc-b757-7c47d4ac931c\"\n                },\n                {\n                    \"id\": \"a219e9bd-fd44-49b2-9c3c-a29ca8a04394\",\n                    \"mimeType\": \"image/png\",\n                    \"url\": \"10.33.8.53/1634409611906-515961208\",\n                    \"type\": 0,\n                    \"incidentId\": \"fbdb9892-bada-4acc-b757-7c47d4ac931c\"\n                },\n                {\n                    \"id\": \"db0090bc-768c-4f3d-a2d1-61d2660603bb\",\n                    \"mimeType\": \"image/png\",\n                    \"url\": \"10.33.8.53/1634547865154-317560047\",\n                    \"type\": 0,\n                    \"incidentId\": \"fbdb9892-bada-4acc-b757-7c47d4ac931c\"\n                }\n            ]\n        },\n        {\n            \"id\": \"fc0cffc9-3095-4ab7-bf34-43f8742c1a97\",\n            \"description\": \"incident description new\",\n            \"latitude\": 89898989,\n            \"longitude\": 68888788,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 2,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-17T06:18:40.224Z\",\n            \"updatedAt\": \"2021-10-17T06:18:40.224Z\",\n            \"medias\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "upload incident image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "incidentId",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/naif/Desktop/DSC_0141 4x6.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/incident/upload/e172100d-60d0-4ddd",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"incident",
+								"upload",
+								"e172100d-60d0-4ddd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "upload incident image",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "incidentId",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/naif/Desktop/DSC_0141 4x6.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/incident/upload/e172100d-60d0-4ddd",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"incident",
+										"upload",
+										"e172100d-60d0-4ddd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2-eoX0dku9ba8cNUXvu/DyeabcC+s\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Aug 2021 09:28:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "ok"
+						}
+					]
+				},
+				{
+					"name": "get incidents list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/incident",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"incident"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get incidents list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/incident",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"incident"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "270"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10e-wsfnXXfLaw+FhgtHFEWfbXLb0UY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Aug 2021 09:34:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"baseURL\": \"10.33.8.53\",\n    \"incidents\": [\n        {\n            \"id\": \"0be8e341-5364-44c9-88a5-99bfc91d12ad\",\n            \"description\": \"incident description new\",\n            \"latitude\": 89898989,\n            \"longitude\": 68888788,\n            \"status\": 0,  \n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-17T06:09:45.621Z\",\n            \"updatedAt\": \"2021-10-17T06:09:45.621Z\",\n            \"medias\": [\n                {\n                    \"id\": \"b768bc32-d926-4c11-b48a-e60cd2e600b7\",\n                    \"mimeType\": \"image/png\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"0be8e341-5364-44c9-88a5-99bfc91d12ad\"\n                }\n            ]\n        },\n        {\n            \"id\": \"281fcb81-a2e4-4cc9-a3f5-48b265e7dc02\",\n            \"description\": \"5555555555555tt5\",\n            \"latitude\": 24.7337534,\n            \"longitude\": 46.774254,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 3,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-11-02T12:53:44.625Z\",\n            \"updatedAt\": \"2021-11-02T12:53:44.626Z\",\n            \"medias\": [\n                {\n                    \"id\": \"24aa7af0-3f29-4987-a857-f8d9e688b637\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"281fcb81-a2e4-4cc9-a3f5-48b265e7dc02\"\n                }\n            ]\n        },\n        {\n            \"id\": \"2904bf2d-13c7-4271-824d-f50bbd6c6cf3\",\n            \"description\": \"000000000\",\n            \"latitude\": 24.7337107,\n            \"longitude\": 46.7742429,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:51:12.925Z\",\n            \"updatedAt\": \"2021-10-19T16:51:12.925Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"2dbee07d-6220-41db-9656-f9de88a6f6b8\",\n            \"description\": \"eeee wwwwwww\",\n            \"latitude\": 89.898989,\n            \"longitude\": 68.888788,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-18T10:46:50.097Z\",\n            \"updatedAt\": \"2021-10-18T10:46:50.098Z\",\n            \"medias\": [\n                {\n                    \"id\": \"a60dbf62-43be-42e4-8d8f-de55be333ca7\",\n                    \"mimeType\": \"image/png\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"2dbee07d-6220-41db-9656-f9de88a6f6b8\"\n                }\n            ]\n        },\n        {\n            \"id\": \"2fdc0ae5-ae4f-44ae-9e0f-0462e1c31956\",\n            \"description\": \"Tytytytytytytygy\",\n            \"latitude\": 24.733702,\n            \"longitude\": 46.7742467,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T15:38:07.588Z\",\n            \"updatedAt\": \"2021-10-19T15:38:07.588Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"3e162b9a-e4e0-4010-b4a0-4109d0b53007\",\n            \"description\": \"444444\",\n            \"latitude\": 24.7337357,\n            \"longitude\": 46.7742471,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:23:44.767Z\",\n            \"updatedAt\": \"2021-10-19T16:23:44.767Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"4b832edf-d07a-45a1-b03c-34bc0bec2e69\",\n            \"description\": \"issues NEW\",\n            \"latitude\": 89.898989,\n            \"longitude\": 68.888788,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 5,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-18T09:04:45.964Z\",\n            \"updatedAt\": \"2021-10-18T09:04:45.964Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"4f1c168c-fa2a-40a0-afcb-a6d848523013\",\n            \"description\": \"666666\",\n            \"latitude\": 24.7336746,\n            \"longitude\": 46.7742688,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T11:22:18.135Z\",\n            \"updatedAt\": \"2021-10-19T11:22:18.135Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"5f1c56c1-99e4-46a8-926b-d3b62cbc749e\",\n            \"description\": \"Description test\",\n            \"latitude\": 24.7337266,\n            \"longitude\": 46.7742543,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T11:03:18.254Z\",\n            \"updatedAt\": \"2021-10-19T11:03:18.255Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"61bb0374-4df8-4ba9-a680-5a16f134f059\",\n            \"description\": \"33333333\",\n            \"latitude\": 24.7336973,\n            \"longitude\": 46.7742397,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:46:33.927Z\",\n            \"updatedAt\": \"2021-10-19T16:46:33.927Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"70cf6cef-5d37-45be-8b54-de38f8b9b4cf\",\n            \"description\": \"Test\",\n            \"latitude\": 25,\n            \"longitude\": 47,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-17T07:36:35.752Z\",\n            \"updatedAt\": \"2021-10-17T07:36:35.752Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"854a5a6e-8012-4d79-ad7a-67f3313125a9\",\n            \"description\": \"test\",\n            \"latitude\": 37.785834,\n            \"longitude\": -122.406417,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-25T08:33:45.911Z\",\n            \"updatedAt\": \"2021-10-25T08:33:45.911Z\",\n            \"medias\": [\n                {\n                    \"id\": \"ee9d7de7-680e-4fa5-8a99-bf8482945cde\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"854a5a6e-8012-4d79-ad7a-67f3313125a9\"\n                }\n            ]\n        },\n        {\n            \"id\": \"956c7838-11d7-425c-9a2a-d907f8ca35bd\",\n            \"description\": \"Tttttreeessdtyy\",\n            \"latitude\": 24.7337135,\n            \"longitude\": 46.7742494,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T11:15:50.004Z\",\n            \"updatedAt\": \"2021-10-19T11:15:50.004Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"95cbcb47-c849-4355-a3b2-98abee036ecd\",\n            \"description\": \"test\",\n            \"latitude\": 37.785834,\n            \"longitude\": -122.406417,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-11-01T13:56:46.946Z\",\n            \"updatedAt\": \"2021-11-01T13:56:46.946Z\",\n            \"medias\": [\n                {\n                    \"id\": \"3a46c81c-f52c-4c3b-a8d8-4a655e057dd3\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"95cbcb47-c849-4355-a3b2-98abee036ecd\"\n                },\n                {\n                    \"id\": \"f636f566-fb5c-4c88-9431-60277462c678\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"95cbcb47-c849-4355-a3b2-98abee036ecd\"\n                }\n            ]\n        },\n        {\n            \"id\": \"984e301f-9ff5-4563-afb4-bf9c38c15808\",\n            \"description\": \"888888\",\n            \"latitude\": 24.7337477,\n            \"longitude\": 46.774248,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T11:40:35.546Z\",\n            \"updatedAt\": \"2021-10-19T11:40:35.546Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"9cee78d2-3700-4474-9bc9-f8ec9d8b78d5\",\n            \"description\": \"998999889988\",\n            \"latitude\": 24.7337087,\n            \"longitude\": 46.7742509,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:33:06.228Z\",\n            \"updatedAt\": \"2021-10-19T16:33:06.229Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"a26fdc62-28cb-4858-9eec-a768ae43f720\",\n            \"description\": \"121212121212\",\n            \"latitude\": 24.733696,\n            \"longitude\": 46.774239,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:38:48.722Z\",\n            \"updatedAt\": \"2021-10-19T16:38:48.723Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"a61806ac-01b5-4742-8cd9-ca426ccdcbb3\",\n            \"description\": \"test \",\n            \"latitude\": 37.785834,\n            \"longitude\": -122.406417,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-25T08:37:00.201Z\",\n            \"updatedAt\": \"2021-10-25T08:37:00.201Z\",\n            \"medias\": [\n                {\n                    \"id\": \"0dcc34bc-841f-46b3-bf68-e25234a93327\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"a61806ac-01b5-4742-8cd9-ca426ccdcbb3\"\n                },\n                {\n                    \"id\": \"8e0c7f87-f649-44dd-85b9-0d703cb2c4e9\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"a61806ac-01b5-4742-8cd9-ca426ccdcbb3\"\n                }\n            ]\n        },\n        {\n            \"id\": \"a71489f0-f3ce-48da-91f6-d8b509d24a47\",\n            \"description\": \"test describtion\",\n            \"latitude\": 37.785834,\n            \"longitude\": -122.406417,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-11-01T11:49:15.456Z\",\n            \"updatedAt\": \"2021-11-01T11:49:15.456Z\",\n            \"medias\": [\n                {\n                    \"id\": \"212a0610-ac57-405f-a11f-c5811c051126\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"a71489f0-f3ce-48da-91f6-d8b509d24a47\"\n                }\n            ]\n        },\n        {\n            \"id\": \"ab73fdb8-fb49-43cc-bd6d-45fae4f1a2f2\",\n            \"description\": \"incident description new\",\n            \"latitude\": 89898989,\n            \"longitude\": 68888788,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-17T06:05:44.478Z\",\n            \"updatedAt\": \"2021-10-17T06:05:44.479Z\",\n            \"medias\": [\n                {\n                    \"id\": \"de7e3f07-ec59-41b7-841d-7dd63a34b62d\",\n                    \"mimeType\": \"image/png\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"ab73fdb8-fb49-43cc-bd6d-45fae4f1a2f2\"\n                }\n            ]\n        },\n        {\n            \"id\": \"b189f774-aa9b-491d-ace0-a989ad6ae2e5\",\n            \"description\": \"Rererererere\",\n            \"latitude\": 24.7337154,\n            \"longitude\": 46.7742608,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T15:30:41.204Z\",\n            \"updatedAt\": \"2021-10-19T15:30:41.204Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"c2dd5278-712b-4995-9531-608e14ae6f94\",\n            \"description\": \"11111111\",\n            \"latitude\": 24.7337035,\n            \"longitude\": 46.7742368,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:48:37.054Z\",\n            \"updatedAt\": \"2021-10-19T16:48:37.054Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"c89d945f-d979-43b5-b9b4-c03619eacc02\",\n            \"description\": \"Thisis the last description\",\n            \"latitude\": 24.733705,\n            \"longitude\": 46.7742452,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T11:13:32.411Z\",\n            \"updatedAt\": \"2021-10-19T11:13:32.411Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"d36f55bb-5445-4f8b-a01a-af4e2304a0b7\",\n            \"description\": \"test\",\n            \"latitude\": 37.785834,\n            \"longitude\": -122.406417,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 3,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-11-01T12:50:30.830Z\",\n            \"updatedAt\": \"2021-11-01T12:50:30.830Z\",\n            \"medias\": [\n                {\n                    \"id\": \"97211853-8ea5-4c61-8ecf-9e0239d8cd01\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"d36f55bb-5445-4f8b-a01a-af4e2304a0b7\"\n                }\n            ]\n        },\n        {\n            \"id\": \"d378b7b4-e2d1-4138-b534-3d9f7b08c751\",\n            \"description\": \"00000000\",\n            \"latitude\": 24.7336704,\n            \"longitude\": 46.7742536,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:08:02.423Z\",\n            \"updatedAt\": \"2021-10-19T16:08:02.423Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"d5d22179-9673-4289-bc9a-6ef3e8850a8d\",\n            \"description\": \"11111111\",\n            \"latitude\": 24.7337006,\n            \"longitude\": 46.7742438,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:53:14.177Z\",\n            \"updatedAt\": \"2021-10-19T16:53:14.177Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"e44b743e-c244-487a-becf-927f4c2567ec\",\n            \"description\": \"Yyyyyyyyyy5\",\n            \"latitude\": 24.7337402,\n            \"longitude\": 46.7742498,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T11:18:13.328Z\",\n            \"updatedAt\": \"2021-10-19T11:18:13.328Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"e6c32899-3c6f-4a70-b649-553fedaefce6\",\n            \"description\": \"Testttttt123456\",\n            \"latitude\": 24.7338161,\n            \"longitude\": 46.7742793,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 7,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-11-01T12:51:37.567Z\",\n            \"updatedAt\": \"2021-11-01T12:51:37.567Z\",\n            \"medias\": [\n                {\n                    \"id\": \"e05e7aa4-1d08-4000-be23-282fde343170\",\n                    \"mimeType\": \"image/jpg\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"e6c32899-3c6f-4a70-b649-553fedaefce6\"\n                }\n            ]\n        },\n        {\n            \"id\": \"f9ba717a-efdf-4f55-917c-51d66f754492\",\n            \"description\": \"111111111\",\n            \"latitude\": 24.733702,\n            \"longitude\": 46.7742482,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-19T16:11:26.751Z\",\n            \"updatedAt\": \"2021-10-19T16:11:26.751Z\",\n            \"medias\": []\n        },\n        {\n            \"id\": \"fbdb9892-bada-4acc-b757-7c47d4ac931c\",\n            \"description\": \"issues 44\",\n            \"latitude\": 89.898989,\n            \"longitude\": 68.888788,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 1,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-16T18:39:16.071Z\",\n            \"updatedAt\": \"2021-10-16T18:39:16.071Z\",\n            \"medias\": [\n                {\n                    \"id\": \"11faa08e-0769-43c1-aaca-d091fbad0399\",\n                    \"mimeType\": \"image/png\",\n                    \"url\": \"10.33.8.53/1634548218871-465386997\",\n                    \"type\": 0,\n                    \"incidentId\": \"fbdb9892-bada-4acc-b757-7c47d4ac931c\"\n                },\n                {\n                    \"id\": \"a219e9bd-fd44-49b2-9c3c-a29ca8a04394\",\n                    \"mimeType\": \"image/png\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"fbdb9892-bada-4acc-b757-7c47d4ac931c\"\n                },\n                {\n                    \"id\": \"db0090bc-768c-4f3d-a2d1-61d2660603bb\",\n                    \"mimeType\": \"image/png\",\n                    \"url\": \"https://picsum.photos/300/200/\",\n                    \"type\": 0,\n                    \"incidentId\": \"fbdb9892-bada-4acc-b757-7c47d4ac931c\"\n                }\n            ]\n        },\n        {\n            \"id\": \"fc0cffc9-3095-4ab7-bf34-43f8742c1a97\",\n            \"description\": \"incident description new\",\n            \"latitude\": 89898989,\n            \"longitude\": 68888788,\n            \"status\": 0,\n            \"priority\": null,\n            \"typeId\": 2,\n            \"issuerId\": \"af698686-7470-499b-a745-765e89b3c4b4\",\n            \"assigneeId\": null,\n            \"createdAt\": \"2021-10-17T06:18:40.224Z\",\n            \"updatedAt\": \"2021-10-17T06:18:40.224Z\",\n            \"medias\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "incident types  with category Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/types",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"types"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "incident types & category drop downs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/types",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"types"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "270"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10e-wsfnXXfLaw+FhgtHFEWfbXLb0UY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Aug 2021 09:34:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"arabicName\": \"كهرباء\",\n        \"englishName\": \"english name 1\",\n        \"subTypes\": [\n            {\n                \"id\": 1,\n                \"arabicName\": \"اناره\",\n                \"englishName\": \"english name 1\",\n                \"categoryId\": 1\n            },\n            {\n                \"id\": 7,\n                \"arabicName\": \"توصيله اضافيه\",\n                \"englishName\": \"english name 7\",\n                \"categoryId\": 1\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"arabicName\": \"جدران\",\n        \"englishName\": \"english name 2\",\n        \"subTypes\": [\n            {\n                \"id\": 2,\n                \"arabicName\": \"طلاء\",\n                \"englishName\": \"english name 2\",\n                \"categoryId\": 2\n            },\n            {\n                \"id\": 8,\n                \"arabicName\": \"تشقق\",\n                \"englishName\": \"english name 8\",\n                \"categoryId\": 2\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"arabicName\": \"أثاث\",\n        \"englishName\": \"english name 3\",\n        \"subTypes\": [\n            {\n                \"id\": 3,\n                \"arabicName\": \"كرسي\",\n                \"englishName\": \"english name 3\",\n                \"categoryId\": 3\n            },\n            {\n                \"id\": 4,\n                \"arabicName\": \"المكتب\",\n                \"englishName\": \"english name 4\",\n                \"categoryId\": 3\n            }\n        ]\n    },\n    {\n        \"id\": 4,\n        \"arabicName\": \"تكييف\",\n        \"englishName\": \"english name 4\",\n        \"subTypes\": []\n    },\n    {\n        \"id\": 5,\n        \"arabicName\": \"اسم عربي ٥\",\n        \"englishName\": \"english name 5\",\n        \"subTypes\": [\n            {\n                \"id\": 5,\n                \"arabicName\": \"مشكله بدرجه الحرارة\",\n                \"englishName\": \"english name 5\",\n                \"categoryId\": 5\n            }\n        ]\n    },\n    {\n        \"id\": 6,\n        \"arabicName\": \"اسم عربي ٦\",\n        \"englishName\": \"english name 6\",\n        \"subTypes\": [\n            {\n                \"id\": 6,\n                \"arabicName\": \"مشكله بالصوت\",\n                \"englishName\": \"english name 6\",\n                \"categoryId\": 6\n            }\n        ]\n    },\n    {\n        \"id\": 7,\n        \"arabicName\": \"اسم عربي ٧\",\n        \"englishName\": \"english name 7\",\n        \"subTypes\": []\n    },\n    {\n        \"id\": 8,\n        \"arabicName\": \"اسم عربي ٨\",\n        \"englishName\": \"english name 8\",\n        \"subTypes\": []\n    },\n    {\n        \"id\": 9,\n        \"arabicName\": \"اسم عربي ٩\",\n        \"englishName\": \"english name 9\",\n        \"subTypes\": [\n            {\n                \"id\": 9,\n                \"arabicName\": \"اسم عربي ٩\",\n                \"englishName\": \"english name 9\",\n                \"categoryId\": 9\n            }\n        ]\n    },\n    {\n        \"id\": 10,\n        \"arabicName\": \"اسم عربي ١٠\",\n        \"englishName\": \"english name 10\",\n        \"subTypes\": [\n            {\n                \"id\": 10,\n                \"arabicName\": \"اسم عربي ١٠\",\n                \"englishName\": \"english name 10\",\n                \"categoryId\": 10\n            }\n        ]\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1zZWVkYWhtZWRAZWxtLnNhIiwiaWF0IjoxNjM1OTI2NjMzLCJleHAiOjE2Njc0ODQyMzN9.5h6z5tvdAJTm3MeURiYeCGh-EkUqX-baRkh6ezL2ZL0",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://mobilerapps.elm.sa"
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://f724cd1d-6331-44ea-9eb0-e1c548263bfa.mock.pstmn.io"
+		}
+	]
+}
